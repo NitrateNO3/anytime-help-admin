@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-soft: var(--brand-soft);
+}
+
+:root {
+  --brand: #4f46e5;
+  --brand-dark: color-mix(in oklab, var(--brand) 80%, black);
+  --brand-soft: color-mix(in oklab, var(--brand) 9%, white);
+}
+
+html,
+body {
+  background: #f7f7f8;
+  color: #1f2328;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Tidy scrollbars inside tables and drawers */
+.thin-scroll::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.thin-scroll::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 8px;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes slide-in {
+  from { transform: translateX(100%); }
+  to { transform: none; }
+}
+.animate-fade-in { animation: fade-in 160ms ease-out; }
+.animate-slide-in { animation: slide-in 200ms ease-out; }
