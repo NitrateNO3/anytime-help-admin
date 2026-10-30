@@ -44,7 +44,7 @@ function BrandMark({ collapsed }: { collapsed?: boolean }) {
       {logo ? (
         <img src={logo} alt="" className="size-8 shrink-0 rounded-lg object-cover" />
       ) : (
-        <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-brand text-sm font-bold text-white">{platformName.slice(0, 1).toUpperCase()}</span>
+        <img src="/logo-mark.png" alt="" className="size-9 shrink-0 object-contain" />
       )}
       {!collapsed && <span className="truncate text-[15px] font-semibold tracking-tight text-zinc-900">{platformName}</span>}
     </div>

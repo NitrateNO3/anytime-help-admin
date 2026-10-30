@@ -16,7 +16,8 @@ export default function JoinLanding() {
   const societies = state.rwas.filter((r) => r.status === 'Active' || r.status === 'Trial').length
   return (
     <>
-      <section className="mx-auto max-w-6xl px-4 pt-16 pb-12 text-center sm:px-6 sm:pt-24">
+      <section className="mx-auto max-w-6xl px-4 pt-12 pb-12 text-center sm:px-6 sm:pt-16">
+        {!state.settings.logo && <img src="/logo.png" alt={state.settings.platformName} className="mx-auto mb-8 h-40 w-auto object-contain sm:h-52" />}
         <p className="mx-auto inline-flex items-center gap-2 rounded-full border border-zinc-200 px-3 py-1 text-[13px] text-zinc-600">
           <span className="size-1.5 rounded-full bg-emerald-500" /> {societies} societies already on {state.settings.platformName} (demo data)
         </p>

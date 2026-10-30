@@ -48,7 +48,7 @@ export default function JoinLayout() {
             {logo ? (
               <img src={logo} alt="" className="size-8 rounded-lg object-cover" />
             ) : (
-              <span className="flex size-8 items-center justify-center rounded-lg bg-brand text-sm font-bold text-white">{platformName[0]}</span>
+              <img src="/logo-mark.png" alt="" className="size-10 object-contain" />
             )}
             <span className="font-semibold tracking-tight text-zinc-900">{platformName}</span>
           </Link>
